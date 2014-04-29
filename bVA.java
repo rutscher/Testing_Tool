@@ -1,13 +1,22 @@
+import java.util.*;
+
 
 public class bVA {
 	
 	int value1, value2, value3 = 0;
 	int nomValue1, nomValue2, nomValue3 = 0;
 	
-	int min1, min2, min3 = 1;
+	//int min1, min2, min3 = 1;
 			
-	int max1, max2, max3 = 5;
-			
+	//int max1, max2, max3 = 5;
+		
+	
+	
+	Set<Integer> s1 = new HashSet<Integer>();
+	
+	Set<Integer> s2 = new HashSet<Integer>();
+	
+	Set<Integer> s3 = new HashSet<Integer>();
 	
 	
 	
@@ -18,39 +27,46 @@ public class bVA {
 		value1 = (min1+max1)/2;
 		value2 = (min2+max2)/2;
 		value3 = (min3+max3)/2;
-		
-		
-		
-		
-		
-		
-		
-	
 			
 		}
 		
 		
 		
-	public int returnValue1() {
+
+	
+	public void setGen(int min1, int max1, int min2, int max2, int min3, int max3) {
 		
 		
-		return value1;
+		
+		
+		s1.add(min1);
+		s1.add(max1);
+		s1.add(min1+1);
+		s1.add(max1-1);
+		s1.add(min1+max1 / 2);
+		
+		
+		s2.add(min2);
+		s2.add(max2);
+		s2.add(min2+1);
+		s2.add(max2-1);
+		s2.add(min2+max2 / 2);
+		
+		
+		s3.add(min3);
+		s3.add(max3);
+		s3.add(min3+1);
+		s3.add(max3-1);
+		s3.add(min3+max3 / 2);
+		
+		
+	
+		
+		
+		
 		
 	}
 	
-	public int returnValue2() {
-		
-		
-		return value2;
-		
-	}
-	
-	public int returnValue3() {
-		
-		
-		return value3;
-		
-	}
 	
 	
 	public static void generate(int[][] sets) {
