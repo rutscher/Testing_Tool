@@ -2,7 +2,9 @@
 
 public class phaseTwoNextDate {
 
-	boolean validInput = true;
+	boolean validInputMonth = true;
+	boolean validInputDay = true; 
+	boolean validInputYear = true;
 	
 	int tomorrowDay, tomorrowMonth, tomorrowYear = 0;
 	
@@ -11,13 +13,13 @@ public class phaseTwoNextDate {
 		
 
 			if (month < 1 || month > 12) {
-				validInput = false;
+				validInputMonth = false;
 			}
 			if (day < 1 || day > 31) {
-				validInput = false;
+				validInputDay = false;
 			}
 			if (year < 1801 || year > 2021) {
-				validInput = false; 
+				validInputYear = false; 
 			}
 
 		}
@@ -28,8 +30,37 @@ public class phaseTwoNextDate {
 		tomorrowMonth = month;
 		tomorrowYear = year;
 		
+		phaseTwoNextDate test1 = new phaseTwoNextDate();
+			test1.validDate(month, day, year);
+			
+		if ((test1.validInputDay == false) && (test1.validInputMonth == true) && (test1.validInputYear == false)) {
+			
+			
+			System.out.println("Invalid Year");
+			
+		}
+		
+		else if ((test1.validInputDay == true) && (test1.validInputMonth == false) && (test1.validInputYear == true)) {
+			
+			
+			System.out.println("Invalid Month");
+			
+		}
+		
+		else if ((test1.validInputDay == false) && (test1.validInputMonth == true) && (test1.validInputYear == true)) {
+			
+			
+			System.out.println("Invalid Day");
+			
+		}
+		
+		else {
+			
+		
 		// make a switch variable so as not to change the original value
 		int switchVariable = 0;
+		
+		
 
 		//combine range 1-99 to single case in switch
 		if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10) { // 31 Day Month
@@ -152,6 +183,7 @@ public class phaseTwoNextDate {
 		}
 
 
+		
 System.out.println(tomorrowMonth);
 System.out.println(tomorrowDay);
 System.out.println(tomorrowYear);
@@ -162,14 +194,14 @@ System.out.println(tomorrowYear);
 	}
 			
 	
-
+	}
 	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	 phaseTwoNextDate test = new phaseTwoNextDate();
-	 test.nextDate(2,29,1992);
+	 test.nextDate(12,30,1992);
 		
 	}
 

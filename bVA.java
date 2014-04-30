@@ -53,6 +53,7 @@ public class bVA {
 		s2.add(min2+max2 / 2);
 		
 		
+		
 		s3.add(min3);
 		s3.add(max3);
 		s3.add(min3+1);
@@ -95,12 +96,17 @@ public class bVA {
 		
 		
 		**/
-		
+		//Boundary Value Analysis 
+		/*generate(new int[][]{
+			    {1, 5, 2, 4, 3},
+			    {1, 5, 2, 4, 3},
+			    {1, 5, 2, 4, 3}});
+		**/
+		//Robust Boundary Value Analysis 
 		generate(new int[][]{
-			    {1, 5, 2, 6, 3},
-			    {1, 5, 2, 6, 3},
-			    {1, 5, 2, 6, 3}});
-		
+			    {1, 5, 2, 4, 3, 0, 6},
+			    {1, 5, 2, 4, 3, 0, 6},
+			    {1, 5, 2, 4, 3, 0, 6}});
 		
 		
 		
