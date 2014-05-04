@@ -72,13 +72,24 @@ public class bVA {
 	
 	public static void generate(int[][] sets) {
 	    int solutions = 1;
-	    for(int i = 0; i < sets.length; solutions *= sets[i].length, i++);
+	    
+	    for(int i = 0; i < sets.length; i++) {
+	    	
+	    	solutions *= sets[i].length;
+	    	
+	    }
+	    
 	    for(int i = 0; i < solutions; i++) {
+	    	
 	        int j = 1;
+	        
 	        for(int[] set : sets) {
+	        	
 	            System.out.print(set[(i/j)%set.length] + " ");
+	            
 	            j *= set.length;
 	        }
+	        
 	        System.out.println();
 	    }
 	}
@@ -96,13 +107,13 @@ public class bVA {
 		
 		
 		**/
-		//Boundary Value Analysis 
+		//Worst Case
 		/*generate(new int[][]{
 			    {1, 5, 2, 4, 3},
 			    {1, 5, 2, 4, 3},
 			    {1, 5, 2, 4, 3}});
 		**/
-		//Robust Boundary Value Analysis 
+		//Robust Worst Case
 		generate(new int[][]{
 			    {1, 5, 2, 4, 3, 0, 6},
 			    {1, 5, 2, 4, 3, 0, 6},
