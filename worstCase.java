@@ -1,9 +1,6 @@
-import java.util.*;
 
+public class worstCase {
 
-public class bVA {
-	
-	
 	int valueA, valueB, valueC;
 
 	int aMinPlus, bMinPlus, cMinPlus;
@@ -16,7 +13,7 @@ public class bVA {
 	
 	int array[];
 	
-	public void inputBVA(int minA, int maxA, int minB, int maxB, int minC,
+	public void inputWC(int minA, int maxA, int minB, int maxB, int minC,
 			int maxC) {
 
 		valueA = (minA + maxA) / 2;
@@ -68,9 +65,6 @@ public class bVA {
 	   	
 	        int j = 1;
 	        
-	        
-	        
-	        
 	        for(int[] set : sets) {
 	        	
 	        	
@@ -78,9 +72,6 @@ public class bVA {
 	           //System.out.print(set[(i/j)%set.length] + " ");
 	           
 	     
-	           
-	           
-	           
 	            
 	            inputArray[h] = set[(i/j)%set.length];
 	            	h++;
@@ -89,44 +80,8 @@ public class bVA {
 	            j = j*set.length;
 	        }
 	        
-	       
+	       // System.out.println();
 	    }
 	}
-
 	
-
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		/* generate(new int[][]{
-			    {min1, max1, min1+1, max1-1, (min1+max1)/2},
-			    {min2, max2, min2+1, max2-1, (min2+max2)/2},
-				{min3, max3, min3+1, max3-1, (min3+max3)/2}});
-		
-		
-		**/
-		//Worst Case
-		/*(generate(new int[][]{
-			    {1, 5, 2, 4, 3},
-			    {1, 5, 2, 4, 3},
-			    {1, 5, 2, 4, 3}});
-		
-		**/
-		//Robust Worst Case
-		/*generate(new int[][]{
-		    {1, 5, 2, 4, 3, 0, 6},
-			    {1, 5, 2, 4, 3, 0, 6},
-			    {1, 5, 2, 4, 3, 0, 6}});
-		
-		**/
-		
-		bVA test = new bVA();
-		test.inputBVA(1, 5, 1, 5, 1, 5);
-		//test.generate(sets);
-		
-		
-
-	}
-
 }

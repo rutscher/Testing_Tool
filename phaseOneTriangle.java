@@ -3,7 +3,7 @@ public class phaseOneTriangle {
 	boolean isATriangle = true;
 	String triangleType = "Not A Triangle";
 
-	public String triangle(int a, int b, int c) {
+	public void triangle(int a, int b, int c) {
 
 		while (isATriangle == true) {
 
@@ -34,11 +34,12 @@ public class phaseOneTriangle {
 
 			if (a >= (b + c) || b >= (a + c) || c >= (a + b)) {
 				isATriangle = false;
+				triangleType = "Not a Triangele";
 				break;
 
 			}
 
-			if (a == b && b == c) {
+			if ((a == b) && (b == c)) {
 				triangleType = "Equilateral";
 			}
 
@@ -57,8 +58,8 @@ public class phaseOneTriangle {
 		//System.out.println("Is triangle:");
 		//System.out.println(isATriangle);
 		//System.out.println("Type of Triangle:");
-		//System.out.println(triangleType);
-		return triangleType;
+		System.out.println(triangleType);
+		//return triangleType;
 
 	}
 
@@ -66,7 +67,7 @@ public class phaseOneTriangle {
 		// TODO Auto-generated method stub
 
 		phaseOneTriangle test1 = new phaseOneTriangle();
-		test1.triangle(18, 6, 23);
+		test1.triangle(7, 5, 5);
 
 	}
 

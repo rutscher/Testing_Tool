@@ -7,9 +7,9 @@ public class phaseThreeCommission {
 
 	public void commission(int locks, int stocks, int barrels) {
 
-		lockPrice = 45.0;
-		stockPrice = 30.0;
-		barrelPrice = 25.0;
+		lockPrice = 35.0;
+		stockPrice = 25.0;
+		barrelPrice = 20.0;
 		totalLocks = 0;
 		totalStocks = 0;
 		totalBarrels = 0;
@@ -20,9 +20,9 @@ public class phaseThreeCommission {
 			totalStocks += stocks;
 			totalBarrels += barrels;
 
-			System.out.println(totalLocks);
-			System.out.println(totalStocks);
-			System.out.println(totalBarrels);
+			//System.out.println(totalLocks);
+			//System.out.println(totalStocks);
+			//System.out.println(totalBarrels);
 
 			lockSales = lockPrice * totalLocks;
 			stockSales = stockPrice * totalStocks;
@@ -30,7 +30,7 @@ public class phaseThreeCommission {
 
 			sales = lockSales + stockSales + barrelSales;
 
-			System.out.println(sales);
+			System.out.println("Sales:"+" "+sales);
 
 			if (sales > 1800.0) {
 
@@ -53,7 +53,7 @@ public class phaseThreeCommission {
 
 		}
 
-		System.out.println(commission);
+		System.out.println("Commission:"+" "+commission);
 
 	}
 
